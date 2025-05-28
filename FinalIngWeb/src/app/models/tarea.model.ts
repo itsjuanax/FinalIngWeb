@@ -1,5 +1,6 @@
-export interface Modelo {
+export interface Tarea {
   id: number;
   nombre: string;
   descripcion: string;
 }
+

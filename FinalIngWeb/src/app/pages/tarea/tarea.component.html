@@ -1,0 +1,20 @@
+<h2>Gestión de Tareas</h2>
+
+<form (ngSubmit)="editando ? guardarEdicion() : crearTarea()">
+  <input type="text" [(ngModel)]="nuevaTarea.nombre" name="nombre" placeholder="Nombre de la tarea" required />
+  <input type="text" [(ngModel)]="nuevaTarea.descripcion" name="descripcion" placeholder="Descripción" required />
+
+  <button type="submit">{{ editando ? 'Guardar' : 'Crear tarea' }}</button>
+  <button *ngIf="editando" (click)="cancelarEdicion()" type="button" class="cancelar">Cancelar</button>
+</form>
+
+<ul>
+  <li *ngFor="let tarea of tareas">
+    <strong>{{ tarea.nombre }}</strong> - {{ tarea.descripcion }}
+    <div class="acciones">
+      <button class="editar" (click)="iniciarEdicion(tarea)">Editar</button>
+      <button class="eliminar" (click)="eliminarTarea(tarea.id)">Eliminar</button>
+    </div>
+  </li>
+</ul>
+

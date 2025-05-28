@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { ModeloComponent } from './pages/modelo/modelo.component';
+import { TareaComponent } from './pages/tarea/tarea.component';
 
 export const routes: Routes = [
-  { path: 'modelo', component: ModeloComponent },
-  { path: '', redirectTo: 'modelo', pathMatch: 'full' }
+  { path: 'tarea', component: TareaComponent },
+  { path: '', redirectTo: 'tarea', pathMatch: 'full' }
 ];
